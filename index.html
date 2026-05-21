@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-PT" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLICK - Creators Agency</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">CLICK<span>.</span></a>
+            <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#artists">Artistas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plans">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-custom">Começar Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal">
+                    <div class="mb-3">
+                        <span class="badge bg-primary-custom text-dark px-3 py-2 rounded-pill fw-bold">Creators Agency</span>
+                    </div>
+                    <h1 class="hero-title">Transformamos Criadores em <span class="text-primary-custom">Marcas Poderosas</span></h1>
+                    <p class="hero-subtitle">Especialistas em marketing digital e gestão artística. Elevamos a tua presença online, conectamos com marcas e aceleramos o teu crescimento.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#plans" class="btn btn-custom">Ver Planos</a>
+                        <a href="#contact" class="btn btn-outline-custom">Falar Connosco</a>
+                    </div>
+                    
+                    <div class="d-flex flex-wrap">
+                        <div class="stats-box">
+                            <div class="stats-number" data-target="200">+0</div>
+                            <div class="stats-text">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stats-box">
+                            <div class="stats-number" data-target="50">+0</div>
+                            <div class="stats-text">Artistas Agenciados</div>
+                        </div>
+                        <div class="stats-box">
+                            <div class="stats-number" data-target="1">+0M</div>
+                            <div class="stats-text">Alcance Digital</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 reveal">
+                    <div class="hero-img-container">
+                        <div class="hero-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Marketing Digital" class="hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span class="marquee-text">CREATIVE MARKETING <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <span class="marquee-text">ARTIST MANAGEMENT <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <span class="marquee-text">DIGITAL GROWTH <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <span class="marquee-text">BRANDING EXPERTS <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <!-- Duplicate for infinite effect -->
+            <span class="marquee-text">CREATIVE MARKETING <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <span class="marquee-text">ARTIST MANAGEMENT <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <span class="marquee-text">DIGITAL GROWTH <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+            <span class="marquee-text">BRANDING EXPERTS <i class="bi bi-star-fill text-primary-custom mx-3"></i></span>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <h2 class="section-title reveal">O Que <span class="title-highlight">Fazemos</span></h2>
+            <p class="section-subtitle reveal">Soluções completas para dominar o mercado digital</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <i class="bi bi-graph-up-arrow service-icon"></i>
+                        <h4>Marketing Digital</h4>
+                        <p class="text-muted">Estratégias orientadas a resultados para aumentar a visibilidade e conversão da sua marca em todas as plataformas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <i class="bi bi-phone service-icon"></i>
+                        <h4>Gestão de Redes Sociais</h4>
+                        <p class="text-muted">Planeamento, criação e gestão de comunidades no Instagram, TikTok, YouTube e outras plataformas relevantes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <i class="bi bi-camera-video service-icon"></i>
+                        <h4>Produção de Conteúdo</h4>
+                        <p class="text-muted">Criação de vídeos, fotos e design de alta qualidade que prendem a atenção e geram engajamento real.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <i class="bi bi-star service-icon"></i>
+                        <h4>Gestão de Artistas</h4>
+                        <p class="text-muted">Agenciamento 360º para criadores de conteúdo, DJs e cantores, incluindo negociação com marcas e booking.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <i class="bi bi-music-note-beamed service-icon"></i>
+                        <h4>Promoção Musical</h4>
+                        <p class="text-muted">Lançamentos estratégicos nas plataformas de streaming e campanhas de marketing para potenciar o seu alcance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="service-card">
+                        <i class="bi bi-vector-pen service-icon"></i>
+                        <h4>Branding</h4>
+                        <p class="text-muted">Construção de identidades visuais memoráveis e posicionamento estratégico que destacam a sua marca no mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists -->
+    <section class="section-padding bg-darker" id="artists">
+        <div class="container">
+            <h2 class="section-title reveal">Nossos <span class="title-highlight">Talentos</span></h2>
+            <p class="section-subtitle reveal">Conheça o nosso roster de artistas exclusivos</p>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 reveal">
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1570206231216-86113b562a12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="DJ ALex" class="artist-img">
+                            <div class="artist-overlay">
+                                <h5>DJ Alex M.</h5>
+                                <p class="text-primary-custom mb-2">DJ & Produtor</p>
+                                <div class="social-icons mb-3">
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-spotify"></i></a>
+                                    <a href="#"><i class="bi bi-youtube"></i></a>
+                                </div>
+                                <button class="btn btn-sm btn-outline-light w-100">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal">
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516280440544-d6211f4d99c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sarah J" class="artist-img">
+                            <div class="artist-overlay">
+                                <h5>Sarah J.</h5>
+                                <p class="text-primary-custom mb-2">Cantora</p>
+                                <div class="social-icons mb-3">
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                                    <a href="#"><i class="bi bi-spotify"></i></a>
+                                </div>
+                                <button class="btn btn-sm btn-outline-light w-100">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal">
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1616091093714-c64882e9ab55?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lucas T" class="artist-img">
+                            <div class="artist-overlay">
+                                <h5>Lucas T.</h5>
+                                <p class="text-primary-custom mb-2">Influenciador Lifestyle</p>
+                                <div class="social-icons mb-3">
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                                <button class="btn btn-sm btn-outline-light w-100">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal">
+                    <div class="artist-card">
+                        <div class="artist-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1520096503882-747d6e648f57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mia V" class="artist-img">
+                            <div class="artist-overlay">
+                                <h5>Mia V.</h5>
+                                <p class="text-primary-custom mb-2">Criadora de Conteúdo</p>
+                                <div class="social-icons mb-3">
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-youtube"></i></a>
+                                </div>
+                                <button class="btn btn-sm btn-outline-light w-100">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 reveal">
+                <a href="#contact" class="btn btn-outline-custom">Ver Todos os Artistas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section-padding" id="gallery">
+        <div class="container">
+            <h2 class="section-title reveal">Últimos <span class="title-highlight">Trabalhos</span></h2>
+            <p class="section-subtitle reveal">Momentos captados das nossas campanhas mais recentes</p>
+            
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Concerto DJ" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f5f4b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Studio Recording" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1606117331085-5760f3b58a0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Photoshoot" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Creative Meeting" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 reveal">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1540039155732-6761b54cb116?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Festival Main Stage" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 reveal">
+                <a href="#contact" class="btn btn-outline-custom">Pedir Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="section-padding" id="plans">
+        <div class="container">
+            <h2 class="section-title reveal">Planos & <span class="title-highlight">Preços</span></h2>
+            <p class="section-subtitle reveal">Escolha o pacote ideal para alavancar os seus resultados</p>
+
+            <div class="row g-4 align-items-center">
+                <!-- Start Plan -->
+                <div class="col-lg-4 reveal">
+                    <div class="pricing-card">
+                        <h4>Plano START</h4>
+                        <p class="text-muted">Ideal para quem está a começar no digital.</p>
+                        <div class="price">€299<span>/mês</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 1 Criador de Conteúdo</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 1 Reel Mensal</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 2 Stories</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 5 Follow-ups/Mensagens</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Monitoramento Básico</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-custom w-100">Selecionar Plano</a>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="col-lg-4 reveal">
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">MAIS POPULAR</div>
+                        <h4>Plano PROFESSIONAL</h4>
+                        <p class="text-light">O ecossistema completo para líderes do mercado.</p>
+                        <div class="price text-primary-custom">€999<span>/mês</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 10x Mais Alcance</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gestão Completa 360º</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Equipe Criativa Dedicada</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Branding Profissional</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Produção Premium (Vídeo/Foto)</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gestão de Artistas e Bookings</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Estratégia de Crescimento</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Suporte Prioritário 24/7</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-custom w-100">Começar Agora</a>
+                    </div>
+                </div>
+
+                <!-- Growth Plan -->
+                <div class="col-lg-4 reveal">
+                    <div class="pricing-card">
+                        <h4>Plano GROWTH</h4>
+                        <p class="text-muted">Para marcas prontas para expandir e faturar.</p>
+                        <div class="price">€599<span>/mês</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 2 Criadores de Conteúdo</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 2 Reels Mensais</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 4 Stories</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 10 Follow-ups/Mensagens</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Monitoramento Avançado</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Gestão de Redes Sociais</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-custom w-100">Selecionar Plano</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section-padding bg-darker" id="portfolio">
+        <div class="container">
+            <h2 class="section-title reveal">Nosso <span class="title-highlight">Portfólio</span></h2>
+            <p class="section-subtitle reveal">Trabalhos recentes, campanhas e eventos de sucesso</p>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eventos" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4 class="text-dark fw-bold">Festival Vibe</h4>
+                            <p class="text-dark">Gestão de Eventos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Campanha Digital" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4 class="text-dark fw-bold">Urban Style</h4>
+                            <p class="text-dark">Campanha Digital</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Produção" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4 class="text-dark fw-bold">Videoclipe "Neon"</h4>
+                            <p class="text-dark">Produção Audiovisual</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sessão Fotográfica" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h4 class="text-dark fw-bold">Editorial Moda</h4>
+                            <p class="text-dark">Sessão Fotográfica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 reveal">
+                    <div class="portfolio-item" style="height: 100%;">
+                        <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sessão Fotográfica" class="portfolio-img" style="height: 100%; object-fit: cover;">
+                        <div class="portfolio-overlay">
+                            <h4 class="text-dark fw-bold">Campanha Global</h4>
+                            <p class="text-dark">Branding & Redes Sociais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 reveal">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sobre Nós" class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25">
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 ps-lg-5 reveal">
+                    <h2 class="section-title text-start mb-4">Sobre a <span class="title-highlight">CLICK</span></h2>
+                    <p class="lead mb-4">Somos mais do que uma agência. Somos os parceiros estratégicos para criadores que querem dominar o mercado.</p>
+                    <p class="text-muted mb-4">Fundada com a missão de revolucionar a forma como artistas e marcas interagem no mundo digital. A CLICK foca-se na inovação criativa, crescimento sustentável e estratégias que geram impacto real e mensurável.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary-custom rounded-circle p-2 me-3 text-dark">
+                            <i class="bi bi-eye-fill"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">A Nossa Visão</h5>
+                            <p class="text-muted mb-0">Ser a principal aceleradora de talentos digitais globalmente.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary-custom rounded-circle p-2 me-3 text-dark">
+                            <i class="bi bi-rocket-takeoff-fill"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">A Nossa Missão</h5>
+                            <p class="text-muted mb-0">Transformar criatividade em negócios altamente rentáveis.</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline-custom">Junta-te à Família</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding bg-darker" id="testimonials">
+        <div class="container">
+            <h2 class="section-title reveal">O Que <span class="title-highlight">Dizem</span> Sobre Nós</h2>
+            <p class="section-subtitle reveal">A satisfação dos nossos clientes é a nossa melhor métrica</p>
+
+            <div class="row">
+                <div class="col-md-4 reveal">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted mb-4">"A equipa da CLICK transformou a minha carreira. O alcance das minhas redes triplicou em 3 meses e fechei parcerias incríveis."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Cliente" class="client-img me-3">
+                            <div>
+                                <h6 class="mb-0">Ana S.</h6>
+                                <small class="text-primary-custom">Influenciadora Digital</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted mb-4">"Profissionalismo puro. O branding e a gestão de campanhas da CLICK deram um aspeto premium à nossa marca de roupa."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Cliente" class="client-img me-3">
+                            <div>
+                                <h6 class="mb-0">Carlos M.</h6>
+                                <small class="text-primary-custom">CEO, UrbanWear</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="text-muted mb-4">"A melhor agência com quem já trabalhei para lançamentos musicais. O suporte e a estratégia são de outro nível."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Cliente" class="client-img me-3">
+                            <div>
+                                <h6 class="mb-0">DJ K.</h6>
+                                <small class="text-primary-custom">Produtor Musical</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Vamos <span class="title-highlight">Conversar</span></h2>
+            <p class="section-subtitle reveal">Pronto para elevar o teu projeto ao próximo nível?</p>
+
+            <div class="row g-5">
+                <div class="col-lg-5 reveal">
+                    <div class="contact-box h-100">
+                        <h4 class="mb-4">Informações de Contacto</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="text-primary-custom fs-3 me-3"><i class="bi bi-geo-alt"></i></div>
+                            <div>
+                                <h5>Localização</h5>
+                                <p class="text-muted">Avenida da Liberdade, 100<br>1250-145 Lisboa, Portugal</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="text-primary-custom fs-3 me-3"><i class="bi bi-envelope"></i></div>
+                            <div>
+                                <h5>Email</h5>
+                                <p class="text-muted">hello@clickagency.com<br>booking@clickagency.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-5">
+                            <div class="text-primary-custom fs-3 me-3"><i class="bi bi-telephone"></i></div>
+                            <div>
+                                <h5>Telefone</h5>
+                                <p class="text-muted">+351 912 345 678</p>
+                            </div>
+                        </div>
+
+                        <h5>Siga-nos</h5>
+                        <div class="mt-3">
+                            <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 reveal">
+                    <div class="contact-box">
+                        <h4 class="mb-4">Envie uma Mensagem</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Seu Nome" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Seu Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select">
+                                        <option selected disabled>Serviço de Interesse</option>
+                                        <option value="1">Plano Start</option>
+                                        <option value="2">Plano Growth</option>
+                                        <option value="3">Plano Professional</option>
+                                        <option value="4">Gestão de Artistas</option>
+                                        <option value="5">Outro Serviço</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Sua Mensagem..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-custom w-100">Enviar Mensagem <i class="bi bi-send ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a href="#" class="text-decoration-none text-light">
+                        <div class="footer-logo mb-3">CLICK<span>.</span></div>
+                    </a>
+                    <p class="text-muted mb-4 pe-lg-5">A agência premium focada em potenciar criadores de conteúdo, marcas e artistas através de estratégias digitais de alto impacto.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3 text-white">Links Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3 text-white">Serviços</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Marketing Digital</a></li>
+                        <li><a href="#">Gestão de Redes</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Agenciamento</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-3 text-white">Newsletter</h5>
+                    <p class="text-muted">Subscreva para receber dicas e novidades.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="O seu email" style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: white;">
+                        <button class="btn btn-custom" type="button">Subscrever</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top" style="border-color: var(--glass-border) !important;">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2026 CLICK Creators Agency. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="text-muted mb-0">Criado com <i class="bi bi-heart-fill text-primary-custom mx-1"></i> para o topo.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/351912345678" target="_blank" class="btn-whatsapp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+    
+    <a href="#home" class="btn-top" id="btnTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- External Libraries -->
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
