@@ -193,3 +193,11 @@
             "max-glare": 0.3,
             scale: 1.03
         });
+
+        VanillaTilt.init(document.querySelectorAll(".team-card"), {
+            max: 8,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+            scale: 1.02
+        });
