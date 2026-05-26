@@ -473,6 +473,14 @@
             transform: scale(1.05);
             z-index: 2;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 200, 83, 0.1);
+            color: #ffffff;
+        }
+        
+        .pricing-card.popular h4,
+        .pricing-card.popular p,
+        .pricing-card.popular li,
+        .pricing-card.popular span {
+            color: #ffffff !important;
         }
 
         .popular-badge {
