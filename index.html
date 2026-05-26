@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT" data-bs-theme="light">
+<html lang="pt-PT" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
 
 <body>
 
-    <!-- Custom Cursor -->
+    <!-- Custom Cursor (desktop only) -->
     <div id="cursor"></div>
     <div id="cursor-follower"></div>
 
@@ -50,6 +50,11 @@
                     <li class="nav-item"><a class="nav-link" href="#team">Equipa</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="btn-theme-toggle me-3" aria-label="Alterar tema">
+                    <i class="bi bi-sun-fill sun-icon"></i>
+                    <i class="bi bi-moon-fill moon-icon"></i>
+                </button>
                 <a href="#contact" class="btn btn-custom">Começar Agora</a>
             </div>
         </div>
@@ -91,7 +96,7 @@
                 <div class="col-lg-6 mt-5 mt-lg-0 reveal">
                     <div class="hero-img-container">
                         <div class="hero-glow"></div>
-                        <img src="assets/logo/logo.png" alt="Marketing Digital" class="hero-img">
+                        <img src="assets/fotos/todos.jpg" alt="Equipa CLICK" class="hero-img" style="border-radius:20px;width:100%;height:auto;object-fit:cover;">
                     </div>
                 </div>
             </div>
@@ -186,9 +191,11 @@
                         <div class="artist-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                                 alt="Mr. Bow" class="artist-img">
-                            <div class="artist-overlay">
+                            <div class="artist-label">
                                 <h5>Mr. Bow</h5>
-                                <p class="text-primary-custom mb-2">Cantor & Produtor</p>
+                                <p class="text-primary-custom mb-0">Cantor &amp; Produtor</p>
+                            </div>
+                            <div class="artist-overlay">
                                 <div class="social-icons mb-3">
                                     <a href="#"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-spotify"></i></a>
@@ -204,9 +211,11 @@
                         <div class="artist-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                                 alt="Neyma" class="artist-img">
-                            <div class="artist-overlay">
+                            <div class="artist-label">
                                 <h5>Neyma</h5>
-                                <p class="text-primary-custom mb-2">Cantora</p>
+                                <p class="text-primary-custom mb-0">Cantora</p>
+                            </div>
+                            <div class="artist-overlay">
                                 <div class="social-icons mb-3">
                                     <a href="#"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-tiktok"></i></a>
@@ -222,9 +231,11 @@
                         <div class="artist-img-wrapper">
                             <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                                 alt="Lizha James" class="artist-img">
-                            <div class="artist-overlay">
+                            <div class="artist-label">
                                 <h5>Lizha James</h5>
-                                <p class="text-primary-custom mb-2">Cantora & Empresária</p>
+                                <p class="text-primary-custom mb-0">Cantora &amp; Empresária</p>
+                            </div>
+                            <div class="artist-overlay">
                                 <div class="social-icons mb-3">
                                     <a href="#"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-tiktok"></i></a>
@@ -239,9 +250,11 @@
                     <div class="artist-card">
                         <div class="artist-img-wrapper">
                             <img src="assets/artistas/laylizzy.jpg" alt="Laylizzy" class="artist-img">
-                            <div class="artist-overlay">
+                            <div class="artist-label">
                                 <h5>Laylizzy</h5>
-                                <p class="text-primary-custom mb-2">Rapper & Compositor</p>
+                                <p class="text-primary-custom mb-0">Rapper &amp; Compositor</p>
+                            </div>
+                            <div class="artist-overlay">
                                 <div class="social-icons mb-3">
                                     <a href="#"><i class="bi bi-instagram"></i></a>
                                     <a href="#"><i class="bi bi-youtube"></i></a>
@@ -332,7 +345,7 @@
                     <div class="pricing-card">
                         <h4>Plano STARTER</h4>
                         <p class="text-muted">Ideal para quem está a começar no digital.</p>
-                        <div class="price">15.000 MZN<span>/mês</span></div>
+                        <div class="price">15.000 <span class="price-currency">MZN</span><span>/mês</span></div>
                         <ul class="pricing-features">
                             <li><i class="bi bi-check-circle-fill"></i> 1 Criador de Conteúdo</li>
                             <li><i class="bi bi-check-circle-fill"></i> 1 Reel Mensal</li>
@@ -350,7 +363,7 @@
                         <div class="popular-badge">MAIS POPULAR</div>
                         <h4>Plano PROFESSIONAL</h4>
                         <p class="text-light">O ecossistema completo para líderes do mercado.</p>
-                        <div class="price text-primary-custom">999 MT<span>/mês</span></div>
+                        <div class="price text-primary-custom">80.000 <span class="price-currency">MZN</span><span>/mês</span></div>
                         <ul class="pricing-features">
                             <li><i class="bi bi-check-circle-fill"></i> 10x Mais Alcance</li>
                             <li><i class="bi bi-check-circle-fill"></i> Gestão Completa 360º</li>
@@ -370,7 +383,7 @@
                     <div class="pricing-card">
                         <h4>Plano GROWTH</h4>
                         <p class="text-muted">Para marcas prontas para expandir e faturar.</p>
-                        <div class="price">599 MT<span>/mês</span></div>
+                        <div class="price">45.000 <span class="price-currency">MZN</span><span>/mês</span></div>
                         <ul class="pricing-features">
                             <li><i class="bi bi-check-circle-fill"></i> 2 Criadores de Conteúdo</li>
                             <li><i class="bi bi-check-circle-fill"></i> 2 Reels Mensais</li>
@@ -642,7 +655,7 @@
                             <div class="text-primary-custom fs-3 me-3"><i class="bi bi-geo-alt"></i></div>
                             <div>
                                 <h5>Localização</h5>
-                                <p class="text-muted">Avenida da Liberdade, 100<br>1250-145 Lisboa, Portugal</p>
+                                <p class="text-muted">Av. Julius Nyerere, Maputo<br>Moçambique</p>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -655,16 +668,17 @@
                         <div class="d-flex mb-5">
                             <div class="text-primary-custom fs-3 me-3"><i class="bi bi-telephone"></i></div>
                             <div>
-                                <h5>Telefone</h5>
-                                <p class="text-muted">+351 912 345 678</p>
+                                <h5>Telefone / WhatsApp</h5>
+                                <p class="text-muted">+258 84 000 0000</p>
                             </div>
                         </div>
 
                         <h5>Siga-nos</h5>
                         <div class="mt-3">
                             <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="social-circle"><i class="bi bi-linkedin"></i></a>
                             <a href="#" class="social-circle"><i class="bi bi-tiktok"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -759,7 +773,7 @@
     </footer>
 
     <!-- Floating Buttons -->
-    <a href="https://wa.me/351912345678" target="_blank" class="btn-whatsapp">
+    <a href="https://wa.me/258840000000" target="_blank" class="btn-whatsapp">
         <i class="bi bi-whatsapp"></i>
     </a>
 

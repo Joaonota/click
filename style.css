@@ -1,13 +1,26 @@
         :root {
             --primary-color: #00c853;
             --primary-hover: #00e676;
+        }
+
+        [data-bs-theme="light"] {
             --bg-dark: #ffffff;
-            --bg-darker: #f5f5f5;
-            --bg-card: rgba(240, 240, 240, 0.8);
+            --bg-darker: #f7f9f7;
+            --bg-card: rgba(245, 245, 245, 0.75);
             --text-light: #111111;
             --text-muted: #555555;
-            --glass-border: rgba(0, 0, 0, 0.1);
+            --glass-border: rgba(0, 0, 0, 0.08);
             --glass-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        [data-bs-theme="dark"] {
+            --bg-dark: #0a0e0a;
+            --bg-darker: #050705;
+            --bg-card: rgba(18, 26, 18, 0.75);
+            --text-light: #f3f5f3;
+            --text-muted: #a3a8a3;
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-bg: rgba(10, 14, 10, 0.85);
         }
 
         body {
@@ -179,6 +192,19 @@
             background: linear-gradient(-45deg, #f5f5f5, #ffffff, #e8f5e9, #c8e6c9);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
+        }
+
+        [data-bs-theme="dark"] .hero {
+            background: linear-gradient(-45deg, #050705, #0a0e0a, #041208, #071510);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        [data-bs-theme="dark"] .hero-title {
+            background: linear-gradient(to right, #f3f5f3, #a3a8a3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         @keyframes gradientBG {
@@ -384,6 +410,37 @@
             opacity: 1;
         }
 
+        /* Always-visible artist name label */
+        .artist-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 60px 20px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 60%, transparent);
+            z-index: 2;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .artist-label h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+
+        .artist-card:hover .artist-label {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        /* Overlay now shows on top of label on hover */
+        .artist-overlay {
+            z-index: 3;
+        }
+
         .social-icons a {
             color: #fff;
             margin-right: 15px;
@@ -433,9 +490,17 @@
         }
 
         .price {
-            font-size: 3rem;
+            font-size: 2.3rem;
             font-weight: 800;
             margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .price-currency {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-left: 4px;
         }
 
         .price span {
@@ -688,58 +753,60 @@
             }
         }
 
-        /* Custom Cursor */
-        html {
-            cursor: none;
-        }
+        /* Custom Cursor — only on pointer devices (desktop/mouse) */
+        @media (pointer: fine) {
+            html {
+                cursor: none;
+            }
 
-        a,
-        button,
-        .btn {
-            cursor: none !important;
-        }
+            a,
+            button,
+            .btn {
+                cursor: none !important;
+            }
 
-        #cursor {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 10000;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s, background-color 0.3s;
-        }
+            #cursor {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                background-color: var(--primary-color);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 10000;
+                transform: translate(-50%, -50%);
+                transition: width 0.3s, height 0.3s, background-color 0.3s;
+            }
 
-        #cursor-follower {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(0, 200, 83, 0.5);
-            background-color: rgba(0, 200, 83, 0.1);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s, background-color 0.3s, top 0.1s ease-out, left 0.1s ease-out;
-        }
+            #cursor-follower {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border: 1px solid rgba(0, 200, 83, 0.5);
+                background-color: rgba(0, 200, 83, 0.1);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: width 0.3s, height 0.3s, background-color 0.3s;
+            }
 
-        #cursor.hovered {
-            width: 0;
-            height: 0;
-            background-color: transparent;
-        }
+            #cursor.hovered {
+                width: 0;
+                height: 0;
+                background-color: transparent;
+            }
 
-        #cursor-follower.hovered {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(0, 200, 83, 0.3);
-            border-color: var(--primary-color);
-            mix-blend-mode: exclusion;
+            #cursor-follower.hovered {
+                width: 60px;
+                height: 60px;
+                background-color: rgba(0, 200, 83, 0.3);
+                border-color: var(--primary-color);
+                mix-blend-mode: exclusion;
+            }
         }
 
         /* Marquee */
@@ -941,4 +1008,179 @@
 
         .team-card:hover .team-img {
             transform: scale(1.06);
+        }
+
+        /* Scroll Progress Bar — removed for cross-device compatibility */
+
+        /* Theme Toggle Button */
+        .btn-theme-toggle {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        }
+
+        [data-bs-theme="dark"] .btn-theme-toggle {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-theme-toggle:hover {
+            transform: scale(1.08) rotate(15deg);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 200, 83, 0.2);
+        }
+
+        .btn-theme-toggle .sun-icon {
+            display: none;
+        }
+
+        .btn-theme-toggle .moon-icon {
+            display: block;
+        }
+
+        [data-bs-theme="dark"] .btn-theme-toggle .sun-icon {
+            display: block;
+        }
+
+        [data-bs-theme="dark"] .btn-theme-toggle .moon-icon {
+            display: none;
+        }
+
+        /* Artist Modal Styling */
+        .artist-modal-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            color: var(--text-light);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .artist-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background-color: var(--text-light) !important;
+            opacity: 0.8;
+            border-radius: 50%;
+            padding: 8px;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .artist-modal-close:hover {
+            transform: scale(1.1) rotate(90deg);
+            opacity: 1;
+        }
+
+        .modal-artist-img-container {
+            height: 100%;
+            min-height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal-artist-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-artist-details {
+            padding: 40px;
+        }
+
+        .artist-stat-box {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        [data-bs-theme="dark"] .artist-stat-box {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .stat-num {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-lbl {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-socials {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Smooth CSS transitions for body background */
+        body {
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        /* Glass background transitions */
+        .navbar.scrolled,
+        .service-card,
+        .pricing-card,
+        .contact-box,
+        .team-card,
+        .artist-card {
+            transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        /* ---- Typing animation for hero badge ---- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* ---- bg-darker section fix ---- */
+        .bg-darker {
+            background-color: var(--bg-darker) !important;
+        }
+
+        /* ---- Newsletter input dark mode ---- */
+        [data-bs-theme="dark"] .footer .input-group input {
+            background: rgba(255,255,255,0.05) !important;
+            color: #f3f5f3 !important;
+            border-color: var(--glass-border) !important;
+        }
+
+        [data-bs-theme="dark"] .footer .input-group input::placeholder {
+            color: rgba(255,255,255,0.35);
+        }
+
+        /* ---- Social circle dark mode ---- */
+        [data-bs-theme="dark"] .social-circle {
+            background: rgba(255,255,255,0.07);
+            color: #f3f5f3;
+        }
+
+        /* ---- Responsive font sizes ---- */
+        @media (max-width: 576px) {
+            .hero-title { font-size: 2.4rem; }
+            .section-title { font-size: 2rem; }
+            .price { font-size: 2rem; }
         }
